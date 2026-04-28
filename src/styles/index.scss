@@ -5,8 +5,6 @@ $blue-accent: #00acdc;
 $gray-elements: #f3f3f3;
 
 html {
-  --blue-color: #00acdc;
-
   box-sizing: border-box;
 }
 
@@ -42,46 +40,48 @@ body {
   }
 }
 
-.site-header {
+.site{
+
+  &-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
   width: 100%;
-}
 
-.site-header__logo-link {
+  &__logo-link {
   display: flex;
   text-decoration: none;
-}
+  }
 
-.site-header__logo-img {
+  &__logo-img {
   height: 40px;
   width: 40px;
   display: block;
+  }
 }
 
-.site-nav {
+&-nav {
   display: flex;
   align-items: center;
-}
 
-.site-nav__list {
+
+&__list {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.site-nav__item {
+&__item {
   margin-left: 20px;
-}
 
-.site-nav__item:first-child {
+&:first-child {
   margin-left: 0;
 }
+}
 
-.site-nav__link {
+&__link {
   position: relative;
   display: inline-block;
   font-size: 12px;
@@ -93,25 +93,28 @@ body {
   text-decoration: none;
   color: #060b35;
   transition: all 0.3ms easy;
-}
 
-.site-nav__link.is-active {
-  color: var(--blue-color);
-}
 
-.site-nav__link:hover {
-  color: #00acdc;
-}
+&.is-active {
+  color: $blue-accent;
 
-.site-nav__link.is-active::after {
+  &::after {
   content: '';
   position: absolute;
-  background-color: var(--blue-color);
+  background-color: $blue-accent;
   bottom: 0;
   left: 0;
   height: 4px;
   width: 100%;
   border-radius: 8px;
+}
+}
+
+&:hover {
+  color: $blue-accent;
+}
+}
+}
 }
 
 .main {
