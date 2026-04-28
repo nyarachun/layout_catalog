@@ -3,6 +3,7 @@ $secondary: #616070;
 $white: #fff;
 $blue-accent: #00acdc;
 $gray-elements: #f3f3f3;
+$title-hover-color: #34568b;
 
 html {
   box-sizing: border-box;
@@ -91,8 +92,8 @@ body {
   padding: 0;
   text-align: center;
   text-decoration: none;
-  color: #060b35;
-  transition: all 0.3ms easy;
+  color: $main-accent;
+  transition: all 0.3s easy;
 
 
 &.is-active {
@@ -156,6 +157,10 @@ body {
 
   &:hover {
     transform: scale(1.2);
+
+    & .card__title{
+      color: $title-hover-color;
+    }
   }
 
   &__image {
@@ -179,10 +184,6 @@ body {
     color: $main-accent;
     line-height: 18px;
     transition: all 0.3s ease;
-
-    &:hover {
-      color: #34568b;
-    }
   }
 
   &__code {
