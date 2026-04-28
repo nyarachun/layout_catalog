@@ -157,10 +157,10 @@ body {
 
   &:hover {
     transform: scale(1.2);
+  }
 
-    & .card__title{
-      color: $title-hover-color;
-    }
+  &:hover &__title {
+    color: $title-hover-color;
   }
 
   &__image {
