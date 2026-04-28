@@ -91,7 +91,7 @@ body {
       text-align: center;
       text-decoration: none;
       color: $main-accent;
-      transition: all 0.3s easy;
+      transition: all 0.3s ease;
 
       &.is-active {
         color: $blue-accent;
@@ -253,7 +253,7 @@ body {
     box-sizing: border-box;
     text-decoration: none;
 
-    transition: all 0.3s easy;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: $white;
